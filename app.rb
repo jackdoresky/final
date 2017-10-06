@@ -12,7 +12,10 @@ configure :development do
   Dotenv.load
 end
 
+post "/analyze" do
 
+
+end
 get "/" do
 	404
 end
