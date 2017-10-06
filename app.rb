@@ -13,8 +13,9 @@ configure :development do
 end
 
 post "/analyze" do
+  url = params[:url]
 
-
+  url
 end
 get "/" do
 	404
