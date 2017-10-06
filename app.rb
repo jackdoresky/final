@@ -14,7 +14,7 @@ end
 
 post "/analyze" do
   url = params[:url]
-
+  puts url
   url
 end
 get "/" do
