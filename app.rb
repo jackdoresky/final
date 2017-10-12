@@ -25,55 +25,75 @@ end
 
       #gmail
     elsif body.include?("https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin")
-        message =
+        message = "Use at least 8 characters"
 
       #netflix
     elsif body.include?("https://www.netflix.com/login")
-      message =
+      message = "Password should be between 4 and 50 characters"
 
       #Spotify
     elsif body.include?("https://www.spotify.com/us/signup/?ab=mbs")
-      message =
+      message = "Use at least 8 characters"
 
       #facebook
     elsif body.include?("https://www.facebook.com/login.php?login_attempt=1&lwv=110")
-      message =
+      message = "It should be longer than 6 characters, unique to you, and difficult for others to guess"
 
       #Pandora
     elsif body.include?("https://www.pandora.com/account/sign-in")
-      message =
+      message = "Your password must be at least 6 characters long"
 
       #Starbucks
     elsif body.include?("https://www.starbucks.com/account/signin")
-      message =
+      message = "•	From 8 to 25 characters
+•	At least one number
+•	At least one capital letter
+•	At least one lowercase letter
+•	At least one special character such as exclamation point or comma
+"
 
       #Linkedin
     elsif body.include?("https://www.linkedin.com/m/login/")
-      message =
+      message = "6 or more characters"
 
       #Chegg
     elsif body.include?("https://www.chegg.com/auth?action=login&redirect=https%3A%2F%2Fwww.chegg.com%2F&reset_password=0")
-      message =
+      message = "•	At least 6 characters
+•	Upper/lower case letters
+•	Number or punctuation
+"
 
       #Pinterest
     elsif body.include?("https://www.pinterest.com/login/?referrer=home_page")
-      message =
+      message = "You need 6+ characters"
 
       #itunes
     elsif body.include?("https://secure1.store.apple.com/shop/sign_in?c=aHR0cHM6Ly93d3cuYXBwbGUuY29tL3wxYW9zZTQyMmM4Y2NkMTc4NWJhN2U2ZDI2NWFmYWU3NWI4YTJhZGIyYzAwZQ&r=SCDHYHP7CY4H9XK2H&s=aHR0cHM6Ly93d3cuYXBwbGUuY29tL3wxYW9zZTQyMmM4Y2NkMTc4NWJhN2U2ZDI2NWFmYWU3NWI4YTJhZGIyYzAwZQ")
-      message =
+      message ="Your password must have:
+ 8 or more characters
+Upper and lowercase letters
+At least one number
+"
 
       #Venmo
     elsif body.include?("https://venmo.com/account/sign-in")
-      message =
+      message = "Must be 8 to 32 characters"
 
       #Paypal
     elsif body.include?("https://www.paypal.com/signin?country.x=US&locale.x=en_US")
-      message =
+      message = "8 characters or longer.
+At least one number or symbol (like !@#$%^)
+"
 
       #Papa Johns
     elsif body.include?("https://www.papajohns.com/")
-      message =
+      message = "•	At least 1 upper case letter
+•	At least 1 lower case letter
+•	At least 1 number
+•	Be between 8 and 25 characters
+•	At least 1 special character (Recommended)
+•	Does not have 3 of the same character in a row (Recommended)
+"
 
     else
       message = "Website not yet logged. Please log site."
