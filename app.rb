@@ -20,14 +20,14 @@ end
 post "/analyze" do
   url = params[:url]
   puts url
-  url
+  get_password_hint url
 end
 
 def get_password_hint url
 
   if url.nil? or url.blank?
     return "You must provide a URL to find out what the password requirements are."
-  end 
+  end
   #Amazon
   if url.include?("https://www.amazon.com/ap/register?openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=usflex&ignoreAuthState=1&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fyour-account%3Fref_%3Dnav_ya_signin&prevRID=5BGWN0VQ8AK78GMRSP77&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0")
       message = "At least six characters"
