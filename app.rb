@@ -25,7 +25,7 @@ end
 
 def get_password_hint url
 
-  if url.nil? or url.blank?
+  if url.nil?
     return "You must provide a URL to find out what the password requirements are."
   end
   #Amazon
