@@ -10,6 +10,18 @@ document.addEventListener('DOMContentLoaded', function()
 
       var xhr = new XMLHttpRequest();
       xhr.open("GET", "https://tipoffapp.herokuapp.com/analyze?url=" + tab.url, true);
+      document.addEventListener('DOMContentLoaded', function()
+{
+  var checkPageButton = document.getElementById('checkPage');
+  checkPageButton.addEventListener('click', function()
+  {
+
+    chrome.tabs.getSelected(null, function(tab)
+    {
+      d = document;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://tipoffapp.herokuapp.com/analyze?url=" + tab.url, true);
       xhr.onreadystatechange = function()
       {
         if( xhr.readyState == 4 )
@@ -29,5 +41,22 @@ document.addEventListener('DOMContentLoaded', function()
       xhr.send();
 
   });
+
+  var submitUrlButton = document.getElementById('submitUrl');
+  submitUrlButton.addEventListener('click', function()
+  {
+
+    chrome.tabs.getSelected(null, function(tab)
+    {
+      d = document;
+			var value = document.getElementById("unregisteredUrl").value;
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://tipoffapp.herokuapp.com/submit?url=" + tab.url, true);
+      xhr.send();
+    }
+
+  });
+
 }, false);
 }, false);
