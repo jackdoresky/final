@@ -99,8 +99,9 @@ def get_password_hint url
 "
 
   else
-    message = "Website not yet logged. Please log site."
-
+    message = "Website not yet logged. Paste URL from above."
+#textbox appears for user input
+#page scrape for requirements
   end
 
   return message
