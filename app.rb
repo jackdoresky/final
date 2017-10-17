@@ -8,11 +8,18 @@ configure :development do
   Dotenv.load
 end
 
+get "/submit" do
+  url = params[:url]
+  puts url
+  data_log url
+end
+
 get "/analyze" do
   url = params[:url]
   puts url
   get_password_hint url
 end
+
 
 post "/analyze" do
   url = params[:url]
@@ -95,13 +102,11 @@ def get_password_hint url
 •	At least 1 number
 •	Be between 8 and 25 characters
 •	At least 1 special character (Recommended)
-•	Does not have 3 of the same character in a row (Recommended)
-"
+•	Does not have 3 of the same character in a row (Recommended)"
 
   else
     message = "Website not yet logged. Paste URL from above."
-#textbox appears for user input
-#page scrape for requirements
+
   end
 
   return message
