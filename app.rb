@@ -104,6 +104,7 @@ At least one number or symbol (like !@#$%^)
 
   else
     message = "Website not yet logged. Please log site."
+
   end
 
   return message
