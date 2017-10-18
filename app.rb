@@ -118,18 +118,18 @@ DB.create_table :items do
   Float :price
 end
 
+#this is the database that needs to populated
 items = DB[:items] # Create a dataset
 
 # Populate the table
-items.insert(:name => 'abc', :price => rand * 100)
-items.insert(:name => 'def', :price => rand * 100)
-items.insert(:name => 'ghi', :price => rand * 100)
+items.insert(:name => 'URL')
+items.insert(:name => 'sign in requirements')
 
 # Print out the number of records
 puts "Item count: #{items.count}"
 
-# Print out the average price
-puts "The average price is: #{items.avg(:price)}"
+# Print out the database
+puts "{items.list(:name)}"
   end
 
   return message
